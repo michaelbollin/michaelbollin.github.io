@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Viga');
+@import url('https://fonts.googleapis.com/css?family=Khula');
 
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body
+{
+	color:#333;
+	font-family: 'Khula', sans-serif;
+	overflow-y:scroll;
+}
 
 .tagline
 {
@@ -32,4 +46,8 @@
   line-height:16px;
   border-radius:5px;
   font-weight:normal;
+}
+
+a{
+	color:#36b573;
 }

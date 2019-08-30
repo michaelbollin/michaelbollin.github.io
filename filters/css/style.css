@@ -1,18 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Khula');
 
-*
-{
-	margin:0;
-	padding:0;
-	box-sizing:border-box;
-}
 
-body
-{
-	color:#333;
-	font-family: 'Khula', sans-serif;
-	overflow-y:scroll;
-}
+
 
 
 .gradient *
@@ -25,9 +13,7 @@ body
 	width:100%;
 }
 
-a{
-	color:#36b573;
-}
+
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: #CDCDCD;
