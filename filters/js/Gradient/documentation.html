@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Gradient Creator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="_docAssets/css/jquery.colorpicker.css" />
+        <link rel="stylesheet" href="_docAssets/css/jquery.gradientCreator.css" />
+        <link rel="stylesheet" href="_docAssets/css/demo.css" />
+        <script src="_docAssets/js/jquery-1.7.1.min.js"></script>
+        <script src="_docAssets/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script src="_docAssets/js/jquery.colorpicker.js"></script>
+        <script src="_docAssets/js/jquery.gradientCreator.min.js"></script>
+        <script src="_docAssets/js/demo.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div class="header">
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html" >What is it ?</a></li>
+                        <li><a href="demos.html">Examples</a></li>
+                        <li><a href="documentation.html" class="selected">Documentation</a></li>
+                    </ul>
+                </div>
+                <h1 id="topOfPage">jQuery <strong>Gradient Creator</strong></h1>
+            </div>
+            <h2>Documentation</h2>
+            <ul id="summary">
+                <li><a href="documentation.html#p_init"> &nbsp; Initialisation</a></li>
+                <li><a href="documentation.html#p_param"> &nbsp; List of the parameters</a></li>
+                <li><a href="documentation.html#p_meth"> &nbsp; List of the methods</a></li>
+                <li><a href="documentation.html#p_colorpicker"> &nbsp; The Colorpicker</a></li>
+                <li><a href="documentation.html#p_help"> &nbsp; Help and support</a></li>
+            </ul>
+            <h3 id="p_init">Initialization</h3>
+            <div class="demo">             
+                <div class="doc">
+                    <p>In the head, import required CSS and JS files : </p>
+                    <div class="code" style="display: block;">
+                        <p><strong>HTML Code :</strong></p>
+                        <pre>
+&lt;head&gt;
+...
+<span style="width: 340px;">// Colorpicker styles</span>&lt;link rel="stylesheet" href="css/jquery.colorpicker.css" /&gt;       
+<span style="width: 340px;">// Gradient Creator styles</span>&lt;link rel="stylesheet" href="css/jquery.gradientCreator.css" /&gt;   
+<span style="width: 340px;">// jQuery </span>&lt;script src="js/jquery-1.7.1.min.js"&gt;&lt;/script&gt;              
+<span style="width: 340px;">// jQuery-ui utils (UI,Widget,Mouse,Draggable,Droppable)</span>&lt;script src="js/jquery-ui-1.8.18.custom.min.js"&gt;&lt;/script&gt;   
+<span style="width: 340px;">// Colorpicker</span>&lt;script src="js/jquery.colorpicker.js"&gt;&lt;/script&gt;            
+<span style="width: 340px;">// Gradient Creator</span>&lt;script src="js/jquery.gradientCreator.min.js"&gt;&lt;/script&gt;        
+...
+&lt;head&gt;
+                        </pre>
+                    </div>
+                    <p>Then, to add a gradient creator, just create an empty div, and call the plugin like any jQuery plugin :</p>
+                </div>
+                <div class="code" style="display: block;">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;div id="demo1"&gt;&lt;/div&gt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+ $(document).ready(function(){
+    $('#demo1').gradientCreator(); 
+});
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+
+            <h3 id="p_param">List of the parameters</h3>
+            <div class="demo">             
+                <div class="doc">
+                    <p>jQuery Gradient Creator allows you to customize your generators easily. Here is the full list of the default parameters :</p>
+                </div>
+                <div class="code" style="display: block;">
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+ $(document).ready(function(){
+    $('#demo1').gradientCreator({
+<span>// String or Array | Default gradient points</span>        <strong>gradient</strong>: '0% #02CDE8,100% #000000',        
+<span>// Int | Gradient preview width</span>        <strong>width</strong>: 300,                                 
+<span>// Int | Gradient preview height</span>        <strong>height</strong>: 18,                                 
+<span>// Int | Gradient points size</span>        <strong>pointSize</strong>: 8,                               
+<span>// "horizontal" or "vertical" | Orientation of the generated gradient</span>        <strong>orientation</strong>: 'vertical',                    
+<span>// jQuery selector | Define live targets. Ex: '#target1,#target2' </span>        <strong>target</strong>: '',                                 
+<span>// String or Array | Tooltip background gradient points</span>        <strong>tooltipGradient</strong>: '0% #feffff,100% #ededed', 
+<span>// Method | Executed on each gradient change and at start</span>        <strong>onChange</strong>: function(){},                     
+<span>// Method | Executed on initialization only</span>        <strong>onInit</strong>: function(){}                        
+<span>// Method | Executed if the browser doesn't support HTML5</span>        <strong>noSupport</strong>: function(){}                     
+    }); 
+});
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+
+            <h3 id="p_meth">List of the methods</h3>
+            <div class="demo">             
+                <div class="doc">
+                    <p>To call a public method, just do $('#gradientPanel')<strong>.data('gradientCreator').theMethodName()</strong>; </p>
+                    <p>Here is the list of the plugin public methods : </p>
+                </div>
+                <div class="code" style="display: block;">
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+var plugin = $("#demoID").data("gradientCreator"); 
+
+var array = plugin.getArrayGradient();  <span style="width: 500px;">// Return the gradient points array. Ex: [["0%","#FFFFFF"],["100%","#000000"]]</span>
+var css = plugin.getCssGradient(); <span style="width: 500px;">// Return the full gradient generated CSS code</span>
+var string = plugin.getStringGradient(); <span style="width: 500px;">// Return the gradient points as string. Ex: "0% #FFFFFF,100% #000000"</span>
+plugin.setOrientation('vertical'); <span style="width: 500px;">// Change the generated gradient orientation in live. No refresh needed.</span>
+                    </pre>
+                    <p>If you want to change parameters after the plugin initialization, you must refresh the plugin with the <strong>update()</strong> method, like this :</p>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+var plugin = $("#demoID").data("gradientCreator"); 
+<span>// Change the height of the gradient preview</span>plugin.settings.height = 34;    
+<span>// Change the gradient points size</span>plugin.settings.pointSize = 14; 
+<span>// Refresh the plugin</span>plugin.update();                
+                    </pre>
+                </div>
+            </div>
+
+            <h3 id="p_colorpicker">The colorpicker</h3>
+            <div class="demo">             
+                <div class="doc">
+                    <p>This plugin use the Colorpicker plugin, created by Stefan Petre, distributed under MIT and GPL licenses. This plugin is complete, easy to use and fully customizable .</p>
+                    <p>You can find documentation and examples on this page : <a href="http://www.eyecon.ro/colorpicker/" target="_blank">http://www.eyecon.ro/colorpicker/</a></p>
+                    <p>Here is an example of usage :</p>
+                </div>
+                <div class="code" style="display: block;">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;div id="colorpicker"&gt;&lt;/div&gt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+$('#colorpicker').ColorPicker({
+	color: '#0000ff',
+	onChange: function (hsb, hex, rgb) {
+            alert('Selected color: ' + hex);
+	}
+});
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+
+            <h3 id="p_help">Help and support</h3>
+            <p>
+                Any suggestion, bug report or a request for assistance ? <a href="http://codecanyon.net/user/loopus" target="_blank">Contact me via my envato profile.</a> .
+            </p>
+
+        </div>
+        <div class="footer">
+            <p><a href="http://codecanyon.net/user/loopus" target="_blank">&copy; 2012 - Loopus</a></p>
+        </div>
+    </body>
+</html>

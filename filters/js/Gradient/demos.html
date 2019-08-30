@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Gradient Creator</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="_docAssets/css/jquery.colorpicker.css" />
+        <link rel="stylesheet" href="_docAssets/css/jquery.gradientCreator.css" />
+        <link rel="stylesheet" href="_docAssets/css/demo.css" />
+        <script src="_docAssets/js/jquery-1.7.1.min.js"></script>
+        <script src="_docAssets/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script src="_docAssets/js/jquery.colorpicker.js"></script>
+        <script src="_docAssets/js/jquery.gradientCreator.min.js"></script>
+        <script src="_docAssets/js/demo.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div class="header">
+                <div class="nav">
+                    <ul>
+                        <li><a href="index.html" >What is it ?</a></li>
+                        <li><a href="demos.html" class="selected" >Examples</a></li>
+                        <li><a href="documentation.html">Documentation</a></li>
+                    </ul>
+                </div>
+                <h1 id="topOfPage">jQuery <strong>Gradient Creator</strong></h1>
+            </div>
+            <h2>Examples</h2>
+            <ul id="summary">
+                <li><a href="demos.html#p_min"> &nbsp; Minimal usage</a></li>
+                <li><a href="demos.html#p_target"> &nbsp; Target, orientation and customized tooltip</a></li>
+                <li><a href="demos.html#p_css"> &nbsp; Generate CSS code</a></li>
+                <li><a href="demos.html#p_canvas"> &nbsp; Use with a canvas</a></li>
+            </ul>
+            <h3 id="p_min">Minimal usage</h3>
+            <div class="demo">   
+                <p><strong>Render :</strong></p>             
+                <div class="preview">
+                    <div id="demo1"></div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#demo1').gradientCreator(); 
+                        });
+                    </script>
+                </div>
+                <a href="javascript: " onclick="viewCode(this);" class="linkCode">View source code</a>
+                <div class="code">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;div id="demo1"&gt;&lt;/div&gt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+ $(document).ready(function(){
+    $('#demo1').gradientCreator(); 
+});
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+            <h3 id="p_target">Target, orientation and customized tooltip</h3>
+            <div class="demo">                
+                <p><strong>Render :</strong></p>
+                <div class="preview">
+                    <div id="target">Target</div>
+                    <p>
+                        <select id="orientation" onchange="changeOrientation();">
+                            <option value="horizontal">Horizontal</option>
+                            <option value="vertical" selected="selected">Vertical</option>
+                        </select>
+                    </p>
+                    <div id="demo2"></div>
+                    <script>
+                        $(document).ready(function(){
+                            $('#demo2').gradientCreator({
+                                gradient: '#ebf1f6 0%,#abd3ee 49%,#89c3eb 53%,#d5ebfb 100%',
+                                target: '#target',
+                                tooltipGradient: '#87e0fd 0%,#53cbf1 40%,#05abe0 100%'
+                            }); 
+                        });
+                        function changeOrientation()
+                        {
+                            var orientation = $('#orientation :selected').val();
+                            $('#demo2').data('gradientCreator').setOrientation(orientation);
+                        }
+                    </script>
+                </div>
+                <a href="javascript: " onclick="viewCode(this);" class="linkCode">View source code</a>
+                <div class="code">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;div id="target"&gt;&lt;/div&gt;
+&lt;p&gt;
+    &lt;select id="orientation" onchange="changeOrientation();"&gt;
+        &lt;option value="horizontal"&gt;Horizontal&lt;/option&gt;
+        &lt;option value="vertical" selected="selected"&gt;Vertical&lt;/option&gt;
+    &lt;/select&gt;
+&lt;/p&gt;
+&lt;div id="demo2"&gt;&lt;/div&gt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+ $(document).ready(function(){
+    $('#demo2').gradientCreator({
+        gradient: '#ebf1f6 0%,#abd3ee 50%,#89c3eb 51%,#d5ebfb 100%',
+        target: '#target',
+        tooltipGradient: ' #fceabb 0%,#fccd4d 49%,#f8b500 53%,#fbdf93 100%'
+    }); 
+});
+
+function changeOrientation()
+{
+    var orientation = $('#orientation :selected').val();
+    $('#demo2').data('gradientCreator').setOrientation(orientation);
+}
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+            <h3 id="p_css">Generate CSS code</h3>
+            <div class="demo">             
+                <p><strong>Render :</strong></p>   
+                <div class="preview">              
+                    <div id="demo3"></div>  
+                    <script>
+                        $(document).ready(function(){
+                            $('#demo3').gradientCreator({                                
+                                gradient: '#FFC700 0%,#960303 100%',
+                                onChange: function(stringGradient,cssGradient) {
+                                    $('#stringExport').html(stringGradient);
+                                    $('#cssExport').html(cssGradient);
+                                }
+                            }); 
+                        });
+                    </script>
+                </div>         
+                <p>Generated string gradient :</p>
+                <p><strong id="stringExport"></strong></p>
+                <p>Generated Css Code :</p>  
+                <textarea id="cssExport"></textarea>  <br/>
+                <a href="javascript: " onclick="viewCode(this);" class="linkCode">View source code</a>
+                <div class="code">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;div id="demo3"&gt;&lt;/div&gt;
+&lt;p&gt;String gradient :&lt;br/&gt;&lt;strong id="stringExport"&gt;&lt;/strong>&lt;/p&gt;
+&lt;p&lt;Generated Css Code :&lt;/p&gt;
+&lt;textarea id="cssExport"&gt;&lt;/textarea&lt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+$(document).ready(function(){
+    $('#demo3').gradientCreator({                                
+        gradient: '#FFC700 0%,#960303 100%',
+        onChange: function(stringGradient,cssGradient) 
+            $('#stringExport').html(stringGradient);
+            $('#cssExport').html(cssGradient);
+        }
+    }); 
+});
+                    </pre>
+                </div>                
+            </div>
+            <hr class="clear"/>
+            <a href="#topOfPage" class="slideTopLink"><img src="_docAssets/img/demo/arrowTop.png" alt="Slide to the top" /> Slide to the top</a>
+
+            <h3 id="p_canvas">Use with a canvas</h3>
+            <div class="demo">           
+                <p><strong>Render :</strong></p>     
+                <div class="preview">
+                    <canvas id="demoCanvas" width="300" height="180"></canvas>
+                    <p>Sun :</p>
+                    <div id="sunGradient"></div>  
+                    <p>Sky :</p>
+                    <div id="skyGradient"></div>
+                    <p>Ground :</p>
+                    <div id="groundGradient"></div>                    
+                    <script>
+                        $(document).ready(function(){
+                            // Default Gradients
+                            var sunGradientPoints = [['0%','#db8300'], ['100%','#ffdd00']];
+                            var skyGradientPoints = [['0%','#00d2f1'], ['100%','#FFFFFF']];
+                            var groundGradientPoints = [['0%','#15d215'], ['100%','#013f01']];
+                            
+                            // Gradient Creators initialization
+                            $('#sunGradient').gradientCreator({
+                                gradient: sunGradientPoints,
+                                onChange: function(strColors,cssColors,ArrayColors)
+                                {
+                                    sunGradientPoints = ArrayColors;
+                                    drawLandscape();
+                                }
+                            });
+                            $('#skyGradient').gradientCreator({
+                                gradient: skyGradientPoints,
+                                onChange: function(strColors,cssColors,ArrayColors)
+                                {
+                                    skyGradientPoints = ArrayColors;
+                                    drawLandscape();
+                                }
+                            });
+                            $('#groundGradient').gradientCreator({
+                                gradient: groundGradientPoints,
+                                onChange: function(strColors,cssColors,ArrayColors)
+                                {
+                                    groundGradientPoints = ArrayColors;
+                                    drawLandscape();
+                                }
+                            });
+                            
+                            function drawLandscape() {                                
+                                var canvas = $('#demoCanvas');
+                                var ctx = canvas.get(0).getContext('2d');
+                                
+                                // Draw Sky
+                                var skyGradient = ctx.createLinearGradient(0,0,0,canvas.height());                                
+                                skyGradient = getGradientFromPoints(skyGradient,skyGradientPoints);                                  
+                                ctx.fillStyle = skyGradient;
+                                ctx.fillRect(0, 0, canvas.width(), canvas.height());
+                                
+                                // Draw Ground
+                                var groundGradient = ctx.createLinearGradient(0,2*canvas.height()/3,0,canvas.height());
+                                groundGradient = getGradientFromPoints(groundGradient,groundGradientPoints);                             
+                                ctx.fillStyle = groundGradient;
+                                ctx.beginPath();
+                                ctx.moveTo(0, 2*canvas.height()/3);
+                                ctx.bezierCurveTo(canvas.width()/3, canvas.height(), 2*canvas.width()/3, canvas.height()/2 , canvas.width(), 2*canvas.height()/3);
+                                ctx.lineTo(canvas.width(),canvas.height());
+                                ctx.lineTo(0,canvas.height());
+                                ctx.lineTo(0,canvas.height()/2);
+                                ctx.fill();
+                                
+                                // Draw Sun
+                                var sunGradient = ctx.createRadialGradient(3*canvas.width()/4, canvas.height()/4, 0,3*canvas.width()/4, canvas.height()/4, 20);                               
+                                sunGradient = getGradientFromPoints(sunGradient,sunGradientPoints);                                  
+                                ctx.fillStyle = sunGradient;
+                                ctx.beginPath();
+                                ctx.arc(3*canvas.width()/4, canvas.height()/4, 20, 0, 2 * Math.PI, false);
+                                ctx.fill();
+                            }
+                            function getGradientFromPoints(gradient,gradientPoints)
+                            {
+                                $.each(gradientPoints,function (i,point){
+                                    var position = point[0];
+                                    var color = point[1];
+                                    gradient.addColorStop(parseInt(position)/100, color); 
+                                });     
+                                return gradient;
+                            }
+                            
+                        });
+                    </script>
+                </div>
+                <a href="javascript: " onclick="viewCode(this);" class="linkCode">View source code</a>
+                <div class="code">
+                    <p><strong>HTML Code :</strong></p>
+                    <pre>
+&lt;canvas id="demoCanvas" width="300" height="180"&gt;&lt;/canvas&gt;
+&lt;p&gt;Sun :&lt;/p&gt;
+&lt;div id="sunGradient"&gt;&lt;/div&gt;
+&lt;p&gt;Sky :&lt;/p&gt;
+&lt;div id="skyGradient"&gt;&lt;/div&gt;
+&lt;p&gt;Ground :&lt;/p&gt;
+&lt;div id="groundGradient"&gt;&lt;/div&gt;
+                    </pre>
+                    <p><strong>JS Code :</strong></p>
+                    <pre>
+$(document).ready(function(){
+    <strong>// Default Gradients</strong>
+    var sunGradientPoints = [['0%','#db8300'], ['100%','#ffdd00']];
+    var skyGradientPoints = [['0%','#00d2f1'], ['100%','#FFFFFF']];
+    var groundGradientPoints = [['0%','#15d215'], ['100%','#013f01']];
+
+    <strong>// Gradient Creators initialization</strong>
+    $('#sunGradient').gradientCreator({
+        gradient: sunGradientPoints,
+        onChange: function(strColors,cssColors,ArrayColors)
+        {
+            sunGradientPoints = ArrayColors;
+            drawLandscape();   <strong>// refresh canvas while sun gradient is changed</strong>
+        }
+    });
+    $('#skyGradient').gradientCreator({
+        gradient: skyGradientPoints,
+        onChange: function(strColors,cssColors,ArrayColors)
+        {
+            skyGradientPoints = ArrayColors;
+            drawLandscape();    <strong>// refresh canvas while sky gradient is changed</strong>
+        }
+    });
+    $('#groundGradient').gradientCreator({
+        gradient: groundGradientPoints,
+        onChange: function(strColors,cssColors,ArrayColors)
+        {
+            groundGradientPoints = ArrayColors;
+            drawLandscape();    <strong>// refresh canvas while ground gradient is changed</strong>
+        }
+    });
+
+    function drawLandscape() {                                
+        var canvas = $('#demoCanvas');
+        var ctx = canvas.get(0).getContext('2d');
+
+        <strong>// get sky gradient</strong>
+        var skyGradient = ctx.createLinearGradient(0,0,0,canvas.height());                                
+        skyGradient = getGradientFromPoints(skyGradient,skyGradientPoints);                                  
+        ctx.fillStyle = skyGradient;
+
+        <strong>// draw sky</strong>
+        ctx.fillRect(0, 0, canvas.width(), canvas.height());
+        
+        <strong>// get ground gradient</strong>
+        var groundGradient = ctx.createLinearGradient(0,2*canvas.height()/3,0,canvas.height());
+        groundGradient = getGradientFromPoints(groundGradient,groundGradientPoints);                             
+        ctx.fillStyle = groundGradient;
+
+        <strong>// draw ground</strong>
+        ctx.beginPath();
+        ctx.moveTo(0, 2*canvas.height()/3);
+        ctx.bezierCurveTo(canvas.width()/3, canvas.height(), 2*canvas.width()/3, canvas.height()/2,
+                          canvas.width(), 2*canvas.height()/3);
+        ctx.lineTo(canvas.width(),canvas.height());
+        ctx.lineTo(0,canvas.height());
+        ctx.lineTo(0,canvas.height()/2);
+        ctx.fill();
+
+        <strong>// get sun gradient</strong>
+        var sunGradient = ctx.createRadialGradient(3*canvas.width()/4, canvas.height()/4, 0,
+                                                   3*canvas.width()/4, canvas.height()/4, 20);                               
+        sunGradient = getGradientFromPoints(sunGradient,sunGradientPoints);                         
+        ctx.fillStyle = sunGradient;
+      
+        <strong>// draw sun</strong>   
+        ctx.beginPath();
+        ctx.arc(3*canvas.width()/4, canvas.height()/4, 20, 0, 2 * Math.PI, false);
+        ctx.fill();
+    }
+
+    function getGradientFromPoints(gradient,gradientPoints)
+    {
+    <strong>    // Add each gradient point to the canvas gradient</strong>
+        $.each(gradientPoints,function (i,point){
+            var position = point[0];
+            var color = point[1];
+            gradient.addColorStop(parseInt(position)/100, color); 
+        });     
+        return gradient;
+    }
+});
+                    </pre>
+                </div>
+            </div>
+            <hr class="clear"/>
+
+        </div>
+        <div class="footer">
+            <p><a href="http://codecanyon.net/user/loopus" target="_blank">&copy; 2012 - Loopus</a></p>
+        </div>
+    </body>
+</html>

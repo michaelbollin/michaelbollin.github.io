@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css?family=Khula');
+
+*
+{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body
+{
+	color:#333;
+	font-family: 'Khula', sans-serif;
+	overflow-y:scroll;
+}
+
+
+.gradient *
+{
+	box-sizing:content-box;
+}
+
+.gradient canvas
+{
+	width:100%;
+}
+
+a{
+	color:#36b573;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #CDCDCD;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #CDCDCD;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #CDCDCD;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #CDCDCD;
+}
+
+
+#filters
+{
+	width:35%;
+	left:0;
+	min-height:100%;
+	background:#FFF;
+	position:absolute;
+	background:rgb(250, 250, 250);
+	border-right:solid 1px #EFEFEF;
+	padding:30px;
+}
+
+#filters p
+{
+	margin-bottom:30px;
+}
+
+h1 img
+{
+	width:80%;
+}
+
+#colors
+{
+	background:rgba(70,70,70,0.8);
+	right:0;
+	z-index:2;
+	position:absolute;
+	width:100%;
+	min-height:50px;
+	overflow:hidden;
+	padding:5px 10px 5px 30px;
+	right:0;
+	width:65%;
+	vertical-align:top;
+}
+
+#colors ul
+{
+	list-style:none;
+	display:inline-block;
+}
+
+#colors ul li
+{
+	display:inline-block;
+	width:40px;
+}
+#colors ul li a
+{
+	text-indent:-10000px;
+	display:inline-block;
+	width:30px;
+	height:30px;
+	margin:5px auto;
+	border:solid 1px rgba(255,255,255,0.5);
+}
+
+input[type="text"], textarea
+{
+	border-radius:3px;
+	border:solid 1px #CDCDCD;
+}
+
+.range_group
+{
+	margin:10px 0;
+}
+
+.tabs
+{
+	margin-top:20px;
+
+}
+
+.tabs li
+{
+	display:inline-block;
+	width:30%;
+	list-style:none;
+}
+
+
+.tabs li a
+{
+	display:block;
+	width:100%;
+	padding:10px;
+	list-style:none;
+	position:relative;
+	text-decoration:none;
+	text-align:center;
+	border:solid 1px #EFEFEF;
+	background:#FAFAFA;
+	color:#777777;
+	top:1px;
+}
+
+.tabs li.active a
+{
+	border-top:solid 1px #EFEFEF;
+	border-left:solid 1px #EFEFEF;
+	border-right:solid 1px #EFEFEF;
+	border-bottom:solid 1px transparent;
+
+	padding:10px;
+	background:#FFF;
+
+}
+
+.tabContent
+{
+	background:#FFF;
+	border:solid 1px #EFEFEF;
+	padding:20px;
+	display:none;
+	margin-bottom:10px;
+}
+
+.clearAll
+{
+	text-align:right;
+}
+
+#basic
+{
+	display:block;
+}
+
+.range_group > a
+{
+	display:inline-block;
+	width:2%;
+	font-size:12px;
+	color:#333333;
+	text-decoration:none;
+	display:none;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border:solid 4px transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #00a658;
+  cursor: pointer;
+  margin-top: -7px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 1px solid transparent;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #00a658;
+  cursor: pointer;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  border: 1px solid transparent;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #00a658;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+
+  background: #87baa2;
+  border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #87baa2;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  background: #87baa2;
+  border-radius: 1.3px;
+}
+
+
+form label
+{
+	display:inline-block;
+	color:#AAAAAA;
+	font-size:14px;
+	width:20%;
+}
+
+.filterVal
+{
+	padding:3px;
+	width:10%;
+	margin-left:2%;
+}
+
+.filter
+{
+	width:56%;
+}
+
+#image
+{
+	width:65%;
+	position:absolute;
+	height:100%;
+	text-align:center;
+	right:0;
+	background:#000000;
+}
+
+#image .wrap
+{
+	position:relative;
+	top:3%;
+	height:94%;
+	width:calc(100% - 160px);
+	left:80px;
+}
+
+#image img
+{
+	max-width:100%;
+	max-height:100%;
+	object-fit:contain;
+	object-position:center center;
+	top:50%;
+	transform: translate(-50%,-50%);
+	left:50%;
+	position:absolute;
+}
+
+#code
+{
+	width:94%;
+	margin-top:5px;
+	height:60px;
+	padding:10px;
+}
+
+h3 small
+{
+	font-size:14px;
+	color:#666666;
+	font-weight:normal;
+}
+
+#htmlcode
+{
+	width:94%;
+	margin-top:5px;
+	height:60px;
+	padding:10px;
+}
+
+#complexFilters li
+{
+	list-style:none;
+}
+
+#complexFilters li > a
+{
+	display:block;
+	text-decoration:none;
+	padding:10px 10px 6px 10px;
+	margin-bottom:5px;
+	border:solid 1px #CFCFCF;
+	border-radius:3px;
+	font-size:20px;
+	position:relative;
+
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+#complexFilters li a input
+{
+	width:20px;
+	height:20px;
+	top:3px;
+	position:relative;
+	margin-right:20px;
+	pointer-events:none;
+}
+
+.complexContent
+{
+	display:none;
+}
+
+.copy.btn
+{
+	padding:3px 5px 0px 5px;
+	font-size:13px;
+	font-weight:normal;
+	margin-left:5px;
+	top:-2px;
+	position:relative;
+}
+
+span.copy
+{
+	color:#11DD22;
+}
+
+#url
+{
+	font-size:16px;
+	padding:6px;
+	width:100%;
+	display:none;
+	margin:10px 0 20px 0;
+}
+
+.urlUpload
+{
+	display:inline-block;
+	width:45%;
+	line-height:42px;
+	min-height:42px;
+	vertical-align:top;
+	padding-left:0px;
+	white-space:nowrap;
+}
+
+.social
+{
+	display:inline-block;
+	padding:5px;
+	border-radius:6px;
+	height:30px;
+	top:4px;
+	position:relative;
+	background-color:#17b061;
+}
+
+#colors span
+{
+	color:#FFFFFF;
+}
+
+#colors > span
+{
+	position:relative;
+	top:5px;
+	margin-right:10px;
+}
+
+.share
+{
+	display:inline-block;
+	color:#FFFFFF;
+	margin-left:30px;
+	text-align:center;
+	vertical-align:top;
+	right:10px;
+	position:absolute;
+	top:6px;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+		top:5px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+
+.btn {
+	background-color:#17b061;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:15px;
+	padding:6px 20px 2px 20px;
+	text-decoration:none;
+}
+.btn:hover {
+	background-color:#3bca80;
+}
+.btn:active {
+	position:relative;
+}
+
+
+@media screen and (max-width:992px)
+{
+
+	#filters, #image
+	{
+		width:100%;
+		position:static;
+	}
+
+	h1
+	{
+		width:40%;
+		display:inline-block;
+	}
+
+	.fileUpload
+	{
+		display:inline-block;
+		width:40%;
+		text-align:center;
+		position:absolute;
+		top:30px;
+		right:20px;
+	}
+
+	.urlUpload
+	{
+		display:inline-block;
+		width:40%;
+		text-align:center;
+		position:absolute;
+		top:70px;
+		right:20px;
+	}
+
+	.fileUpload.btn:active {
+		position:absolute;
+		top:30px;
+	}
+
+	.range_group
+	{
+		width:50%;
+		float:left;
+	}
+
+
+
+	#colors
+	{
+		width:100%;
+		position:static;
+		text-align:center;
+	}
+
+	#colors .fileUpload,
+	#colors .urlUpload
+	{
+		position:relative;
+		width:100%;
+		display:block;
+		margin-top:20px;
+	}
+
+	#colors .urlUpload a
+	{
+		color:#FFFFFF;
+	}
+
+
+	#image img
+	{
+		position:static;
+		width:90%;
+		margin:40px auto;
+		transform:none;
+	}
+
+	#colors li
+	{
+		display:inline-block;
+		margin:5px;
+	}
+
+}
+
+@media screen and (max-width:500px)
+{
+	.range_group
+	{
+		width:100%;
+		float:none;
+	}
+	h1
+	{
+		width:100%;
+	}
+
+	.fileUpload,.urlUpload
+	{
+		width:100%;
+		position:static;
+	}
+}
