@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Viga');
+
+
+.tagline
+{
+  margin-bottom:90px;
+  font-size:16px;
+}
+
+.logowrapper a, .logowrapper a:hover
+{
+  text-decoration:none;
+  color:#000000;
+}
+
+.logo
+{
+  font-family: 'Viga', sans-serif;
+  font-size:50px;
+  line-height:50px;
+}
+
+.logowrapper .apps
+{
+  font-size:16px;
+  padding:6px;
+  display:inline-block;
+  background:#17b061;
+  color:#FFF;
+  position:Relative;
+  top:-20px;
+  line-height:16px;
+  border-radius:5px;
+  font-weight:normal;
+}
