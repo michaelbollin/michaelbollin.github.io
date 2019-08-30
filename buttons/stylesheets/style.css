@@ -85,10 +85,10 @@ body h1 {
 /* line 23, ../sass/style.scss */
 body h2 {
   margin-top: 70px;
-  font-size: 30pt;
+  font-size: 54px;
   margin-left: 10px;
-  color: #bfbfbf;
-  margin-bottom: 66px;
+  color: #FFFFFF;
+  margin-bottom: 52px;
 }
 /* line 33, ../sass/style.scss */
 body .tagline {
@@ -102,7 +102,7 @@ body .tagline {
 
 /* line 44, ../sass/style.scss */
 #sidebar {
-  width: 340px;
+  width: 380px;
   left: 0;
   float: left;
   min-height: 100vh;
@@ -157,7 +157,7 @@ p.copy {
 
 /* line 111, ../sass/style.scss */
 .wrap {
-  width: calc(100% - 350px);
+  width: calc(100% - 390px);
   max-width: 1000px;
   float: left;
   padding-left: 30px;
@@ -253,10 +253,6 @@ button span {
   background: #0092ff;
   transition: all .2s ease-in-out;
 }
-/* line 215, ../sass/style.scss */
-.b3:hover {
-  padding-left: 30px;
-}
 /* line 219, ../sass/style.scss */
 .b3:hover .circle::before {
   border-top-color: #fff;
@@ -279,7 +275,7 @@ button span {
 .b3:hover span:before {
   display: inline-block;
 }
-/* line 244, ../sass/style.scss */
+/* line 245, ../sass/style.scss */
 .b3 .circle {
   box-shadow: inset 0 0 0 1px #f45e61;
   font-size: inherit;
@@ -295,7 +291,7 @@ button span {
   left: 50px;
   top: calc(50% - 8px);
 }
-/* line 259, ../sass/style.scss */
+/* line 260, ../sass/style.scss */
 .b3 .circle::before, .b3 .circle::after {
   box-sizing: inherit;
   content: '';
@@ -306,19 +302,19 @@ button span {
   left: 0;
   border-radius: 100%;
 }
-/* line 271, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 .b3 .circle:before {
   border: 1px solid transparent;
 }
-/* line 275, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 .b3 .circle::after {
   border: 0 solid transparent;
 }
-/* line 283, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .b3 span:before {
   display: none;
   content: "";
-  position: relative;
+  position: absolute;
   padding: 3px;
   box-shadow: 1px -1px 0 1px #fff inset;
   -webkit-box-shadow: 1px -1px #fff inset;
@@ -326,24 +322,24 @@ button span {
   border-width: 0 0 4px 4px;
   transition: 0.2s;
   transform: rotate(225deg);
-  left: -34px;
-  top: calc(50% - 5px);
+  left: -24px;
+  top: 4px;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 .b4 {
   background: #0092ff;
   transition: all .2s ease;
   overflow: hidden;
   text-align: center;
 }
-/* line 311, ../sass/style.scss */
+/* line 312, ../sass/style.scss */
 .b4:hover:after {
   opacity: 0;
   left: -100%;
   animation: fadeinout 1s linear;
 }
-/* line 318, ../sass/style.scss */
+/* line 319, ../sass/style.scss */
 .b4:after {
   background: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 20px);
   background-size: 400% 100%;
@@ -369,7 +365,7 @@ button span {
     left: -180%;
   }
 }
-/* line 350, ../sass/style.scss */
+/* line 351, ../sass/style.scss */
 .b5 {
   background: #0092ff;
   text-align: center;
@@ -377,7 +373,7 @@ button span {
   color: #FFF;
   transition: all .3s ease;
 }
-/* line 357, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 .b5::before {
   left: -100%;
   width: 100%;
@@ -388,25 +384,25 @@ button span {
   background: #FFF;
   transition: all .3s ease;
 }
-/* line 368, ../sass/style.scss */
+/* line 369, ../sass/style.scss */
 .b5:hover {
   color: #0092ff;
 }
-/* line 371, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .b5:hover::before {
   left: 0%;
 }
 
-/* line 378, ../sass/style.scss */
+/* line 379, ../sass/style.scss */
 .b6 {
   background: #0092ff;
 }
-/* line 382, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .b6:hover .star {
   -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
   animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
 }
-/* line 388, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 .b6 .star {
   position: relative;
   display: inline-block;
@@ -422,7 +418,7 @@ button span {
   /* Controlls the size of the stars. */
   font-size: 8px;
 }
-/* line 407, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 .b6 .star:before, .b6 .star:after {
   content: '';
   display: block;
@@ -436,7 +432,7 @@ button span {
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-/* line 426, ../sass/style.scss */
+/* line 427, ../sass/style.scss */
 .b6 .star:after {
   transform: rotate(35deg);
 }
@@ -460,16 +456,16 @@ button span {
     transform: rotateY(-180deg);
   }
 }
-/* line 457, ../sass/style.scss */
+/* line 458, ../sass/style.scss */
 .b7 {
   background: #0092ff;
 }
-/* line 461, ../sass/style.scss */
+/* line 462, ../sass/style.scss */
 .b7:hover .star {
   -webkit-animation: rotation 0.4s both;
   animation: rotation 0.4s both;
 }
-/* line 467, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .b7 .star {
   position: relative;
   display: inline-block;
@@ -487,7 +483,7 @@ button span {
   /* Controlls the size of the stars. */
   font-size: 8px;
 }
-/* line 489, ../sass/style.scss */
+/* line 490, ../sass/style.scss */
 .b7 .star:before, .b7 .star:after {
   content: '';
   display: block;
@@ -501,7 +497,7 @@ button span {
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-/* line 508, ../sass/style.scss */
+/* line 509, ../sass/style.scss */
 .b7 .star:after {
   transform: rotate(35deg);
 }
@@ -513,7 +509,7 @@ button span {
     transform: rotate(360deg);
   }
 }
-/* line 525, ../sass/style.scss */
+/* line 526, ../sass/style.scss */
 .b8 {
   text-align: center;
   overflow: hidden;
@@ -522,7 +518,7 @@ button span {
   border: solid 1px #0092ff;
   background: transparent;
 }
-/* line 535, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 .b8::before {
   left: 0;
   background: #0092ff;
@@ -535,16 +531,16 @@ button span {
   border: solid 1px #0092ff;
   box-sizing: border-box;
 }
-/* line 548, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 .b8:hover {
   color: #0092ff;
 }
-/* line 551, ../sass/style.scss */
+/* line 552, ../sass/style.scss */
 .b8:hover::before {
   left: 100%;
 }
 
-/* line 558, ../sass/style.scss */
+/* line 559, ../sass/style.scss */
 .b9 {
   text-align: center;
   overflow: hidden;
@@ -552,16 +548,16 @@ button span {
   transition: all .3s ease;
   background: #0092ff;
 }
-/* line 566, ../sass/style.scss */
+/* line 567, ../sass/style.scss */
 .b9 span {
   position: relative;
 }
-/* line 569, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 .b9 span i {
   position: relative;
   z-index: 9;
 }
-/* line 576, ../sass/style.scss */
+/* line 577, ../sass/style.scss */
 .b9 span::before {
   border: solid 1px #FFF;
   content: "";
@@ -572,7 +568,7 @@ button span {
   position: absolute;
   opacity: .75;
 }
-/* line 589, ../sass/style.scss */
+/* line 590, ../sass/style.scss */
 .b9 span::after {
   background: #0092ff;
   content: "";
@@ -583,13 +579,13 @@ button span {
   position: absolute;
   transition: all .3s ease-in-out;
 }
-/* line 604, ../sass/style.scss */
+/* line 605, ../sass/style.scss */
 .b9:hover span:after {
   width: 0;
   left: 50%;
 }
 
-/* line 613, ../sass/style.scss */
+/* line 614, ../sass/style.scss */
 .b10 {
   text-align: center;
   overflow: hidden;
@@ -597,13 +593,13 @@ button span {
   transition: all .3s ease;
   background: #0092ff;
 }
-/* line 624, ../sass/style.scss */
+/* line 625, ../sass/style.scss */
 .b10:hover .star {
   filter: blur(12px);
   margin-right: 0;
   margin-left: -0.6em;
 }
-/* line 633, ../sass/style.scss */
+/* line 634, ../sass/style.scss */
 .b10 .star {
   filter: blur(0px);
   transition: all ease .3s;
@@ -623,7 +619,7 @@ button span {
   /* Controlls the size of the stars. */
   font-size: 8px;
 }
-/* line 657, ../sass/style.scss */
+/* line 658, ../sass/style.scss */
 .b10 .star:before, .b10 .star:after {
   content: '';
   display: block;
@@ -637,26 +633,26 @@ button span {
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-/* line 676, ../sass/style.scss */
+/* line 677, ../sass/style.scss */
 .b10 .star:after {
   transform: rotate(35deg);
 }
 
-/* line 683, ../sass/style.scss */
+/* line 684, ../sass/style.scss */
 .b11 {
   text-align: center;
   overflow: hidden;
   color: #FFF;
   background: #0092ff;
 }
-/* line 693, ../sass/style.scss */
+/* line 694, ../sass/style.scss */
 .b11:hover .star {
   margin-right: 0;
   margin-left: -0.6em;
   transform: scale(4.5) rotate(180deg);
   opacity: .1;
 }
-/* line 704, ../sass/style.scss */
+/* line 705, ../sass/style.scss */
 .b11 .star {
   transition: all ease .3s;
   position: relative;
@@ -676,7 +672,7 @@ button span {
   /* Controlls the size of the stars. */
   font-size: 8px;
 }
-/* line 730, ../sass/style.scss */
+/* line 731, ../sass/style.scss */
 .b11 .star:before, .b11 .star:after {
   content: '';
   display: block;
@@ -690,12 +686,12 @@ button span {
   border-left: 1em solid transparent;
   transform: rotate(-35deg);
 }
-/* line 749, ../sass/style.scss */
+/* line 750, ../sass/style.scss */
 .b11 .star:after {
   transform: rotate(35deg);
 }
 
-/* line 755, ../sass/style.scss */
+/* line 756, ../sass/style.scss */
 .b12 {
   text-align: center;
   overflow: hidden;
@@ -703,16 +699,16 @@ button span {
   transition: all .3s ease;
   background: #0092ff;
 }
-/* line 764, ../sass/style.scss */
+/* line 765, ../sass/style.scss */
 .b12 span {
   position: relative;
 }
-/* line 767, ../sass/style.scss */
+/* line 768, ../sass/style.scss */
 .b12 span i {
   position: relative;
   z-index: 9;
 }
-/* line 774, ../sass/style.scss */
+/* line 775, ../sass/style.scss */
 .b12 span::before {
   border-top: solid 1px #FFF;
   border-bottom: solid 1px #FFF;
@@ -725,7 +721,7 @@ button span {
   position: absolute;
   transition: all ease 0.3s;
 }
-/* line 792, ../sass/style.scss */
+/* line 793, ../sass/style.scss */
 .b12:hover span::before {
   width: 160%;
   left: -30%;
