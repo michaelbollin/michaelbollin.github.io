@@ -289,9 +289,10 @@ form label
 {
 	width:calc(100% - 160px); 
 	margin:0 80px;
+	max-height:120px;
 }
 
-#image img
+#image img.brooke
 {
 	max-width:100%;
 	max-height:100%;
