@@ -270,7 +270,7 @@ form label
 {
 	width:65%;
 	position:absolute;
-	height:100%;
+	height:100% !important;
 	text-align:center;
 	right:0;
 	background:#000000;
@@ -289,7 +289,7 @@ form label
 {
 	width:calc(100% - 160px); 
 	margin:0 80px;
-	max-height:120px;
+	height:120px;
 }
 
 #image img.brooke
