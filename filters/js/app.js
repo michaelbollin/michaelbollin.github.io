@@ -148,7 +148,7 @@ $('#codepen').on("click",function(e){
 	var data = new Object();
 
 	data.css = "img {" + $('#code').val() + " }";
-	data.html = $('#htmlcode').val() + "<img src='https://apps.justcode.today/filters/brooke.jpg' width='800' />";
+	data.html = $('#htmlcode').val() + "<img src='https://justcode.today/filters/brooke.jpg' width='800' />";
 
 	json = JSON.stringify(data);
 	$('#data').val(json);

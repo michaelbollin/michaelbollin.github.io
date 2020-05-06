@@ -1,0 +1,22 @@
+{
+  "name": "justcode.today",
+  "version": "1.0.0",
+  "description": "--- permalink: /index.html ---",
+  "main": "index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelbollin/michaelbollin.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelbollin/michaelbollin.github.io/issues"
+  },
+  "homepage": "https://github.com/michaelbollin/michaelbollin.github.io#readme",
+  "devDependencies": {
+    "@percy/script": "^1.0.0"
+  }
+}
