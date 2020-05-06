@@ -266,11 +266,11 @@ form label
 	width:56%;
 }
 
-#image
+body #image
 {
 	width:65%;
 	position:absolute;
-	height:100% !important;
+	height:100%;
 	text-align:center;
 	right:0;
 	background:#000000;
