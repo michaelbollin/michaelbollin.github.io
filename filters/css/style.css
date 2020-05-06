@@ -285,6 +285,12 @@ form label
 	left:80px;
 }
 
+#image .sense
+{
+	width:calc(100% - 160px); 
+	margin:0 80px;
+}
+
 #image img
 {
 	max-width:100%;
